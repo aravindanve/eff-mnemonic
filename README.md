@@ -1,4 +1,4 @@
-# EFF Large Mnemonic
+# EFF Mnemonic
 
 Convert buffers to and from a human-readable mnemonic phrase using the eff wordlists. This library was built with the purpose of generating mnemonics from passwords or private keys so that they can be easily written down on paper.
 
