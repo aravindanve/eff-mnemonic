@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+# ensure dependencies are installed
+if [ ! -d "node_modules" ]; then
+  echo "Installing dependencies..."
+  npm install
+fi
+
+# exec cli
+exec ./node_modules/.bin/tsx src/cli.ts "$@"

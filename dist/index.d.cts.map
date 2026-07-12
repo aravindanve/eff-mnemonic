@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.cts","names":[],"sources":["../src/base-index.ts","../src/data.ts","../src/mnemonic.ts","../src/parse-big-int.ts"],"mappings":";iBAAgB,mBAAmB;iBAQnB,mBAAmB;;;KCFvB;KACA,aAAa;cAEZ,wBAAqB,MAAgB,oBAAe,QAAA;cA+BpD,wBAAqB,MAAgB,oBAAe,QAAA;cAiBpD;;;iBCjDS,iBACpB,QAAQ,QACR,OAAM,kBAAyB;iBA4BX,iBACpB,iBACA,OAAM,kBAAyB,QAAA,OAAA;;;iBCxCjB,YAAY,gBAAgB"}
