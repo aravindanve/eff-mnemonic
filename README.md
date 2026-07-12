@@ -9,7 +9,7 @@ You can use the cli to encode and decode secret phrases or files.
 #### Encode in interactive mode
 
 ```sh
-> ./cli
+> npx eff-mnemonic
 🔑 # enter your secret phrase
 ┌─────────┬────────────┬───────────┬────────────┬──────────┬───────────┐
 │ (index) │ 0          │ 1         │ 2          │ 3        │ 4         │
@@ -22,7 +22,7 @@ You can use the cli to encode and decode secret phrases or files.
 #### Decode in interactive mode
 
 ```sh
-./cli -d
+npx eff-mnemonic -d
 🔎 bloomers triceps shoptalk travel prodigy outlast shranK
 hello world%
 ```
@@ -31,7 +31,7 @@ hello world%
 
 ```sh
 # the cli pretty prints the mnemonic if output is not redirected
-> echo -n "hello" | ./cli
+> echo -n "hello" | npx eff-mnemonic
 ┌─────────┬───────────┬─────────┬─────────┐
 │ (index) │ 0         │ 1       │ 2       │
 ├─────────┼───────────┼─────────┼─────────┤
@@ -39,11 +39,11 @@ hello world%
 └─────────┴───────────┴─────────┴─────────┘
 
 # the cli plays nice when the output is piped
-> echo -n "hello" | ./cli | ./cli -d | cat
+> echo -n "hello" | npx eff-mnemonic | npx eff-mnemonic -d | cat
 hello%
 
 # the cli plays nice when the output is redirected
-> echo -n "hello" | ./cli | ./cli -d > output.txt
+> echo -n "hello" | npx eff-mnemonic | npx eff-mnemonic -d > output.txt
 ```
 
 ## Programmatic Usage
