@@ -1,6 +1,6 @@
 # EFF Mnemonic
 
-Convert buffers to and from a human-readable mnemonic phrase using the eff wordlists. This library was built with the purpose of generating mnemonics from passwords or private keys so that they can be easily written down on paper.
+Convert buffers to and from a human-readable mnemonic phrase using eff wordlists. This library was built with the purpose of generating mnemonics from passwords or private keys so that they can be easily written down on paper.
 
 ## CLI Usage
 
@@ -63,27 +63,25 @@ const decoded = (await mnemonicToBuffer(encoded)).toString("utf8");
 console.log(decoded); // hello world
 ```
 
-### bufferToMnemonic(buffer, type)
+### bufferToMnemonic(buffer[, type])
 
 - `buffer` `<Buffer>` The buffer to encode.
-- `type` `<"large" | "short_1" | "short_2_0">` The eff wordlist to use, default `"large"`.
+- `type` `<"large" | "short_1" | "short_2_0">` The eff wordlist to use. Default `"large"`.
 - Returns: `<string[]>` An array of mnemonic words.
 
 Encodes abuffer into a human-readable mnemonic word array from the eff wordlist.
 
-### mnemonicToBuffer(buffer, type)
-
-Arguments
+### mnemonicToBuffer(words[, type])
 
 - `words` `<string[]>` An array of mnemonic words.
-- `type` `<"large" | "short_1" | "short_2_0">` The eff wordlist to use, default `"large"`
+- `type` `<"large" | "short_1" | "short_2_0">` The eff wordlist to use. Default `"large"`
 - Returns: `<Buffer>` The decoded buffer.
 
 Decodes a mnemonic word array back into its original buffer.
 
 ## Quirks
 
-Internally, null characters `0x00` are used to pad the input if it's not divisible by 5. So the decoding process strips preceeding null characters before returning the output.
+Internally, null characters `0x00` are used to pad the input if it's not divisible by 5 for the large list or 4 for the short lists. So the decoding process strips preceeding null characters before returning the output.
 
 #### Default behaviour
 
