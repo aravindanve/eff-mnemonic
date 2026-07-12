@@ -37,14 +37,19 @@
       "require": "./dist/index.js"
     }
   },
+  "bin": {
+    "eff-mnemonic": "./bin/eff-mnemonic"
+  },
   "files": [
+    "bin",
     "data",
     "dist"
   ],
   "scripts": {
     "test": "node --import tsx --test src/**/*.test.ts",
-    "build": "tsdown --shims --format cjs,esm --clean --dts src/index.ts",
-    "prepublishOnly": "npm run test && npm run build"
+    "build": "tsdown --shims --format cjs,esm --clean --dts src/index.ts src/cli.ts",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build && npm run test"
   },
   "devDependencies": {
     "@types/node": "^26.1.1",
