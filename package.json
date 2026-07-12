@@ -1,0 +1,55 @@
+{
+  "name": "eff-mnemonic",
+  "version": "0.0.1",
+  "description": "Convert buffers to and from a human-readable mnemonic phrase using the eff wordlists",
+  "keywords": [
+    "eff",
+    "eff-wordlist",
+    "wordlist",
+    "mnemonic",
+    "phrase",
+    "human-readable",
+    "bip39",
+    "passphrase",
+    "crypto",
+    "security"
+  ],
+  "bugs": {
+    "url": "https://github.com/aravindanve/eff-mnemonic/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aravindanve/eff-mnemonic.git"
+  },
+  "license": "ISC",
+  "author": "Aravindan Ve",
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./dist/index.d.mts",
+        "require": "./dist/index.d.ts"
+      },
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "data",
+    "dist"
+  ],
+  "scripts": {
+    "test": "node --import tsx --test src/**/*.test.ts",
+    "build": "tsdown --shims --format cjs,esm --clean --dts src/index.ts",
+    "prepublishOnly": "npm run test && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "tsdown": "^0.22.5",
+    "tsx": "^4.23.0",
+    "typescript": "^7.0.2"
+  }
+}
