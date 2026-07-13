@@ -43,7 +43,8 @@ const { values } = (0, require("node:util").parseArgs)({
 	tokens: true
 });
 const mode = values.decode ? "decode" : "encode";
-if (values.wordlist === "large" || values.wordlist === "short_1" || values.wordlist === "short_2_0") values.wordlist;
+let wordlist;
+if (values.wordlist === "large" || values.wordlist === "short_1" || values.wordlist === "short_2_0") wordlist = values.wordlist;
 else if (values.wordlist) {
 	console.error(`Error: Invalid value for wordlist, must be "large", "short_1", or "short_2_0"`);
 	process.exit(1);
@@ -130,7 +131,7 @@ async function main() {
 		process.exit(1);
 	}
 	if (mode === "encode") {
-		const words = await require_mnemonic.bufferToMnemonic(input);
+		const words = await require_mnemonic.bufferToMnemonic(input, wordlist);
 		if (process.stdout.isTTY) {
 			const table = words.reduce((acc, it, i) => {
 				const j = Math.floor(i / 5);
@@ -142,7 +143,7 @@ async function main() {
 			console.table(table);
 		} else process.stdout.write(words.join(" "));
 	} else {
-		const decoded = await require_mnemonic.mnemonicToBuffer(input.toString("utf8").replace(/[\s\t\-\_\,\:\;\.\n\'\"|\\]+/g, " ").trim().split(" "));
+		const decoded = await require_mnemonic.mnemonicToBuffer(input.toString("utf8").replace(/[\s\t\-\_\,\:\;\.\n\'\"|\\]+/g, " ").trim().split(" "), wordlist);
 		process.stdout.write(decoded);
 	}
 }

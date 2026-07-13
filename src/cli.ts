@@ -144,7 +144,7 @@ async function main(): Promise<void> {
   // handle encode or decode
   if (mode === "encode") {
     // encode mnemonic
-    const words = await bufferToMnemonic(input);
+    const words = await bufferToMnemonic(input, wordlist);
 
     // handle tty output
     if (process.stdout.isTTY) {
@@ -173,7 +173,7 @@ async function main(): Promise<void> {
       .split(" ");
 
     // decode mnemonic
-    const decoded = await mnemonicToBuffer(words);
+    const decoded = await mnemonicToBuffer(words, wordlist);
 
     // write directly to stdout so it can be redirected
     process.stdout.write(decoded);
