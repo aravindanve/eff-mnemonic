@@ -1,7 +1,7 @@
 import { deepStrictEqual, ok, rejects, strictEqual } from "node:assert";
 import { randomBytes } from "node:crypto";
 import { describe, it } from "node:test";
-import { bufferToMnemonic, mnemonicToBuffer } from "./mnemonic"; // Adjust to your file path
+import { bufferToMnemonic, mnemonicToBuffer } from "./mnemonic";
 
 describe("mnemonic", () => {
   describe("bufferToMnemonic", () => {

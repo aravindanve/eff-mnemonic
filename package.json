@@ -1,7 +1,7 @@
 {
   "name": "eff-mnemonic",
   "version": "0.0.5",
-  "description": "Convert buffers to and from a human-readable mnemonic phrase using the eff wordlists",
+  "description": "Convert buffers to and from a human-readable mnemonic phrase using eff wordlists",
   "keywords": [
     "eff",
     "eff-wordlist",
