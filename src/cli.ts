@@ -5,7 +5,6 @@ import { bufferToMnemonic, mnemonicToBuffer } from "./mnemonic";
 
 const { values } = parseArgs({
   options: {
-    encode: { type: "boolean", short: "e", default: true },
     decode: { type: "boolean", short: "d" },
     wordlist: { type: "string", short: "w" },
   },
