@@ -1,4 +1,4 @@
-import { n as init_mnemonic, p as __commonJSMin, r as mnemonicToBuffer, t as bufferToMnemonic } from "./mnemonic-JeCBHZim.mjs";
+import { n as init_mnemonic, p as __commonJSMin, r as mnemonicToBuffer, t as bufferToMnemonic } from "./mnemonic-O11pWuyD.mjs";
 import readline from "node:readline";
 import { parseArgs } from "node:util";
 //#region src/cli.ts

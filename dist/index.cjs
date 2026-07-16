@@ -1,5 +1,5 @@
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-const require_mnemonic = require("./mnemonic-BUQepJt4.cjs");
+const require_mnemonic = require("./mnemonic-dNaBN2DF.cjs");
 exports.bufferToMnemonic = require_mnemonic.bufferToMnemonic;
 exports.clearEffCache = require_mnemonic.clearEffCache;
 exports.getEffNumberToWordMap = require_mnemonic.getEffNumberToWordMap;

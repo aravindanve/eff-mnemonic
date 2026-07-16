@@ -140,7 +140,7 @@ describe("mnemonic", () => {
 
       await rejects(() => mnemonicToBuffer(invalidWords, "large"), {
         name: "TypeError",
-        message: /Word ".*" not large list/,
+        message: /Word ".*" not in large list/,
       });
     });
   });
