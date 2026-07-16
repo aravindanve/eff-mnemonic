@@ -49,7 +49,7 @@ export async function mnemonicToBuffer(
   const base6Chunks = words.map((word) => {
     const chunk = wordToBase6Map.get(word.toLowerCase());
     if (!chunk) {
-      throw TypeError(`Word "${word}" not ${type} list`);
+      throw TypeError(`Word "${word}" not in ${type} list`);
     }
     return chunk;
   });

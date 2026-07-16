@@ -98,7 +98,7 @@ async function mnemonicToBuffer(words, type = "large") {
 	const wordToBase6Map = await getEffWordToNumberMap(type);
 	let hex = parseBigInt(words.map((word) => {
 		const chunk = wordToBase6Map.get(word.toLowerCase());
-		if (!chunk) throw TypeError(`Word "${word}" not ${type} list`);
+		if (!chunk) throw TypeError(`Word "${word}" not in ${type} list`);
 		return chunk;
 	}).join(""), 6).toString(16);
 	if (hex.length % 2 !== 0) hex = "0" + hex;
@@ -112,4 +112,4 @@ var init_mnemonic = __esmMin((() => {
 //#endregion
 export { parseBigInt as a, getEffWordToNumberMap as c, oneToZeroBaseIndex as d, zeroToOneBaseIndex as f, init_parse_big_int as i, init_data as l, init_mnemonic as n, clearEffCache as o, __commonJSMin as p, mnemonicToBuffer as r, getEffNumberToWordMap as s, bufferToMnemonic as t, init_base_index as u };
 
-//# sourceMappingURL=mnemonic-JeCBHZim.mjs.map
+//# sourceMappingURL=mnemonic-O11pWuyD.mjs.map

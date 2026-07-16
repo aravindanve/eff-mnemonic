@@ -20,7 +20,7 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 	enumerable: true
 }) : target, mod));
 //#endregion
-const require_mnemonic = require("./mnemonic-BUQepJt4.cjs");
+const require_mnemonic = require("./mnemonic-dNaBN2DF.cjs");
 let node_readline = require("node:readline");
 node_readline = __toESM(node_readline);
 //#region src/cli.ts
