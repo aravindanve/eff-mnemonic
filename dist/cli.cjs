@@ -26,11 +26,6 @@ node_readline = __toESM(node_readline);
 //#region src/cli.ts
 const { values } = (0, require("node:util").parseArgs)({
 	options: {
-		encode: {
-			type: "boolean",
-			short: "e",
-			default: true
-		},
 		decode: {
 			type: "boolean",
 			short: "d"

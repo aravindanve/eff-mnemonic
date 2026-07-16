@@ -6,11 +6,6 @@ var require_cli = /* @__PURE__ */ __commonJSMin((() => {
 	init_mnemonic();
 	const { values } = parseArgs({
 		options: {
-			encode: {
-				type: "boolean",
-				short: "e",
-				default: true
-			},
 			decode: {
 				type: "boolean",
 				short: "d"
